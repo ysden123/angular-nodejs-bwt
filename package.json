@@ -1,0 +1,35 @@
+{
+  "name": "angular-nodejs-bwt",
+  "version": "0.0.1",
+  "description": "AngularJS Basic Web Templates for server on NodeJS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ysden123/angular-nodejs-bwt.git"
+  },
+  "keywords": [
+    "angular",
+    "node",
+    "angularjs",
+    "nodejs",
+    "web",
+    "server",
+    "basic",
+    "template",
+    "get",
+    "started"
+  ],
+  "author": "Yuriy Stul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ysden123/angular-nodejs-bwt/issues"
+  },
+  "homepage": "https://github.com/ysden123/angular-nodejs-bwt#readme",
+  "dependencies": {
+        "express": ""
+    }
+}
