@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+	<meta charset="ISO-8859-1">
+	<title>Dropdown site menu with template</title>
+    
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    
+    <script src="app.js"></script>
+    
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<h3>Dropdown site menu with template</h3>
+	<div class="navbar navbar-default">
+		<!-- Single button using template-url -->
+		<div class="btn-group" uib-dropdown>
+			<button id="button-template-url" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
+				Dropdown using template 1<span class="caret"></span>
+			</button>
+			<ul class="uib-dropdown-menu" template-url="dropdown1.html" aria-labelledby="button-template-url">
+			</ul>
+		</div>
+
+		<div class="btn-group" uib-dropdown>
+			<button id="button-template-url-2" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
+				Dropdown using template 2<span class="caret"></span>
+			</button>
+			<ul class="uib-dropdown-menu" template-url="dropdown2.html" aria-labelledby="button-template-url-2">
+			</ul>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-12">
+			<div class="well" ui-view></div>
+		</div>
+	</div>
+	
+	<!-- Use separated HTML file "dropdown1.html" or following script
+	<script id="dropdown1.html" type="text/ng-template">
+        <ul class="uib-dropdown-menu" role="menu" aria-labelledby="button-template-url">
+          <li role="menuitem"><a ui-sref="action11">Action 11</a></li>
+          <li class="divider"></li>
+          <li role="menuitem"><a ui-sref="action12">Action 12</a></li>
+        </ul>
+    </script>
+    -->
+	
+	<!-- Use separated HTML file "dropdown2.html" or following script 
+	<script id="dropdown2.html" type="text/ng-template">
+        <ul class="uib-dropdown-menu" role="menu" aria-labelledby="button-template-url-2">
+          <li role="menuitem"><a ui-sref="action21">Action 21</a></li>
+          <li class="divider"></li>
+          <li role="menuitem"><a ui-sref="action22">Action 22</a></li>
+        </ul>
+    </script>
+    -->
+</body>
+</html>

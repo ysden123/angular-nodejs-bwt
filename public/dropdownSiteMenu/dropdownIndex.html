@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Dropdown site menu</title>
+
+	<!-- Bootstrap CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	
+	<!-- Bootstrap -->
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+	<!-- Angular -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	
+	<!-- UI-Router -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+	
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="menuController.js"></script>
+</head>
+<body>
+	<h3>Dropdown menu site</h3>
+	<div ng-controller="DropdownSiteMenuController">
+		<div class="navbar navbar-default">
+			<div class="container">
+				<!-- Menu -->
+				<ul class="nav navbar-nav">
+					<li ng-repeat="menu in menus" ng-class="{dropdown: menu.menus}">
+						<a ng-if="!menu.menus" ui-sref="{{menu.action}}" ng-class="{'dropdown-toggle': menu.menus}" data-toggle="dropdown">{{menu.title}}</a>
+						<a ng-if="menu.menus" ng-class="{'dropdown-toggle': menu.menus}" data-toggle="dropdown">{{menu.title}} <span
+							ng-if="menu.menus" class="caret"></span></a>
+						<ul ng-if="menu.menus" class="dropdown-menu">
+							<li ng-repeat="submenu in menu.menus"><a ui-sref="{{submenu.action}}">{{submenu.title}}</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="well" ui-view></div>
+		</div>
+	</div>
+</body>
+</html>
