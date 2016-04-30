@@ -1,7 +1,7 @@
 # angular-nodejs-bwt
 AngularJS Basic Web Templates for NodeJS
 
-## AngularJS Basic Web Templates for NodeJS.
+## AngularJS Basic Web Templates for NodeJS
 Basic templates for building web application using AngularJS.
 These templates may be used as start points for new web application. 
 
